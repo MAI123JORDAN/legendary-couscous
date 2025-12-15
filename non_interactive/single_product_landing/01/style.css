@@ -1,0 +1,373 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Universal styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Use Poppins font */
+}
+
+/*Default background color*/
+body {
+    background-color: whitesmoke;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/********************************
+**          A. HEADER          **
+********************************/
+header{
+    width: 100%;
+    /* position: fixed; /* Fixes the header at the top */
+    /* top: 0; Aligns to top */
+    /* z-index: 1000; Ensures it stays above other elements */ 
+}
+/* Navigation Bar */
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+    height: 100px;
+}
+
+/* Link styles */
+a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+/*Website Logo*/
+.logo h1{
+    margin-left: 10px;
+    max-height: 60px; /* Limit logo height */
+    color: #626266;
+    display: inline-block;
+    letter-spacing: 10px;
+    position: relative;
+    bottom: 10px;
+}
+
+.logo img {
+    max-height: 60px;
+    max-width: 60px;
+    display: inline-block;
+}
+
+/* Navigation Menu*/
+nav {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between;
+    padding: 2rem 5rem;  */
+}
+/* Navigation list */
+nav ul {
+    display: flex; /* Flexbox for navigation */
+}
+
+nav ul li {
+    list-style: none; /* Remove bullet points */
+    margin-right: 3rem; /* Space between items */
+}
+
+nav ul:last-child{
+    margin-right: none;
+}
+
+nav ul li a {
+    color: #626266; /* Default link color */
+    position: relative; /* Positioning for underline */
+    padding: 5px 0; /* Padding above and below text */
+}
+
+/* Link hover effect */
+nav ul li a:hover {
+    color: rgb(221, 60, 60); /* Change color on hover */
+}
+/* Underline effect on hover */
+nav ul li a:after {
+    content: ""; /* Create pseudo-element */
+    position: absolute; /* Absolute positioning */
+    left: 0; /* Align to the left */
+    width: 0; /* Start with no width */
+    height: 3px; /* Underline height */
+    background: rgb(221, 60, 60); /* Underline color */
+    transition: width 0.4s ease-in-out; /* Smooth transition */
+    bottom: 0; /* Position at the bottom */
+}
+nav ul li a:hover:after {
+    width: 100%; /* Full width on hover */
+}
+
+/*Icons*/
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    margin-left: 1rem;
+}
+/* icon images i.e search, notification */
+.icons a img {
+    height: 40px;
+    width: 40px;
+    filter: contrast(0.28);  /*making the icons look more grey in color*/
+}
+
+/**********************
+**** General tags *****
+***********************/
+h4 {
+    font-weight: 10;
+    color: #626266;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+h2{
+    font-weight: 10;
+    font-size: 2.5rem; /* Title font size */
+ } 
+
+/* Button styles */
+.btn {
+    color: #fffffff1; /* Button text color */
+    font-size: 1rem; /* Consistent font size */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Spacing between letters */
+    padding: 1.5rem 1.5rem; /* Padding for button */
+    border-radius: 50px 50px 50px 50px;    /* Fully rounded button */
+    display: inline-block; /* Inline block for positioning */
+    font-weight: 500; /* Medium font weight */
+    transition: all 0.4s ease-in-out; /* Smooth transition */
+    border: 2px solid rgb(221, 60, 60); /* Border color */
+    background: rgb(221, 60, 60); /* Transparent background */
+    margin: 20px 0;
+    margin-left: -40%;
+    width: 250px;
+}
+/* Button hover effect */
+.btn:hover {
+    background: transparent; /* Change background on hover */
+    color: #626266; /* Change text color on hover */
+    border: 2px solid #626266; /* Border color */
+}
+
+/*Next & Previous bottons*/
+.round {
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    font-size: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    width: 40px; /* Ensures a perfect circle */
+    text-align: center;
+}
+.previous {
+    border: 2px solid rgb(221, 60, 60);
+    color: rgb(221, 60, 60);
+}
+.previous:hover{
+    color: #fffffff1;
+    background-color: rgb(221, 60, 60);
+}
+.next {
+    color: #fffffff1;
+    background-color: rgb(221, 60, 60);
+}
+.next:hover{
+    border: 2px solid rgb(221, 60, 60);
+    color: rgb(221, 60, 60);
+    background-color: #fffffff1;
+}
+
+select {
+    border: none;
+}
+
+
+
+
+/* Product Landing Styles */
+.product-landing {
+    display: flex;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 1200px;
+    height: 800px;
+    margin: 0 auto; 
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Image */
+.product-image {
+    width: 50%;
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 0 0 10px; /* Round corners for the left side */
+}
+
+/* Product Details */
+.product-details {
+    padding: 20px;
+    width: 50%;
+}
+
+.product-details h2 {
+    margin-left: 10px;
+    font-size: 2.5rem;
+    margin: 10px 0; /*Spacing between headings*/
+}
+
+.product-details h4 {
+    margin-left: 10px;
+    font-size: 1.5rem;
+    color: #626266;
+    margin-bottom: 10px;
+}
+
+
+
+.color {
+    color: #626266;
+    font-weight: 5;
+    margin-bottom: 10px;
+}
+
+.rating {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#star {
+    font-size: 30px;
+    color: rgb(221, 60, 60);
+    margin-right: 50px;
+    text-decoration: none;
+}
+
+.rating span {
+    font-size: 16px;
+    text-decoration: underline;
+    color: #626266;
+}
+
+/* Price Container */
+.price_container {
+    border: none;
+    margin-bottom: 15px;
+}
+
+.contents {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 40%;
+    font-size: 25px;
+    /* gap: 5rem; */
+}
+
+.content {
+    padding: 5px 10px;
+}
+
+#price {
+    color: rgb(221, 60, 60);
+    font-size: 25px;
+    align-self: center;
+}
+
+.quantity_selector {
+    margin-left: 80px;
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0; /* Light grey background */
+    border-radius: 50px 50px 50px 50px;
+    padding: 5px 10px; /* Space around the buttons and input */
+    width: 250px; /* Adjust width as necessary */
+}
+
+.increment, .decrement {
+    background: #ffffff; 
+    border-radius: 50%;
+    border: 1px solid white;
+    color: #333; /* Dark color for buttons */
+    font-size: 20px; /* Size of the buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    padding: 10px 15px; /* Space on the sides of the button */
+}
+
+input#quantity {
+    width: 100%; /* Width of the quantity input */
+    border: none;
+    text-align: center; /* Center the text in the input */
+    font-size: 20px; /* Same size as buttons for consistency */
+    background-color: transparent; /* Transparent background */
+}
+
+input#quantity:focus {
+    outline: none; /* Remove the outline on focus */
+}
+
+/* For WebKit browsers (Chrome, Safari, Edge, Opera) */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Removes the default appearance */
+    margin: 0; /* Some older Chrome versions need this */
+}
+
+.product_info{
+    margin-left: 10px;
+    margin-bottom: 2rem;
+}
+
+.product_info .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+}
+
+.value {
+    margin-left: -10%;
+}
+
+.original-price{
+    display: inline-block;
+    color: #aaa; /* Grey color for the original price */
+    margin-left: 10px;
+    margin-right: 50px;
+}
+
+.original-price span{
+    font-size: 30px;
+}
+
+.original-price p{
+    font-size: 18px;
+}
+
+.contentss {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 5rem; */
+}
+
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}

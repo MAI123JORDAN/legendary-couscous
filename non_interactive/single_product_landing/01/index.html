@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your CSS file -->
+    <title>Single Product Landing Page</title>
+</head>
+<body>
+
+    <header>
+        <div class="nav-bar"> 
+            <!-- Logo Section -->
+            <div class="logo">
+                <a href="#Home">
+                    <img src="icons8-wood-100-17.png" alt="logo">
+                    <h1>WOODLY</h1>
+                </a>
+            </div>
+            <!-- Navigation Menu -->
+            <nav>
+                <ul>
+                    <li><a href="#furniture">FUNITURE</a></li>
+                    <li><a href="#lightening">LIGHTENING</a></li>
+                    <li><a href="#office">OFFICE</a></li>
+                    <li><a href="#bath">BED & BATH</a></li>
+                    <li><a href="#outdoor">OUTDOOR</a></li>
+                    <li><a href="#decor">DECOR</a></li>
+                </ul>
+            </nav>
+            <!-- Icons Section -->
+            <div class="icons">
+                <a href="#" class="shopping-icon">
+                    <img src="icons8-shopping-cart-100.png" alt="Shopping"><!--Shopping Icon-->
+                </a>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Product Landing Section -->
+    <div class="product-landing">
+        <div class="product-image">
+            <img src="furniture-1904883_1920.png" alt="CH07 Shell Chair"> <!-- Replace with your product image -->
+        </div>
+
+        <div class="product-details">
+            <h4>New Collection</h4>
+            <h2>CH07 Shell Chair</h2>
+            <h2 class="color"> White</h2>
+
+            <div class="rating">
+                <span id="star">★★★★★</span> <!-- Product rating -->
+                <span>15 reviews</span>
+            </div>
+
+            <!-- <table class="price_container">
+                <tr class="row1">
+                    <td>PRICE</td>
+                    <td>QUANTITY</td>
+                </tr>
+                <tr>
+                    <td id="price">$599.00</td>
+                    <td><input type="number" name="quantity" id="quantity" min="1" placeholder="2"></td>
+                </tr>
+            </table> -->
+
+            <div class="price_container">
+                <div class="contents">
+                    <div class="content" >PRICE</div>
+                    <div class="content">QUANTITY</div>
+                </div>
+                <div class="contents">
+                    <div class="content" id="price">$599.00</div>
+                    <div class="content">
+                        <div class="quantity_selector">
+                            <button class="decrement">-</button>
+                            <input type="number" name="quantity" id="quantity" min="1" placeholder="2">
+                            <button class="increment">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-details-section">
+                <div class="contents">
+                    <div class="content" id="details" >DETAILS</div>
+                    <div class="content" id="description">DESCRIPTION</div>
+                </div>
+
+                <div class="product_info">
+                    <div class="content">
+                        <p class="title">Size:</p>
+                        <span class="value ">29.4" H × 32.8" W × 32.3" D</span>
+                    </div>
+                    <div class="content">
+                        <p class="title">Materials:</p>
+                        <span class="value">Plywood, Oak Veneer, Semi-Aniline Italian Leather</span>
+                    </div>
+                    <div class="content">
+                        <p class="title">Color:</p>
+                        <span class="value">Cream Leather</span>
+                    </div>
+                    <div class="content">
+                        <p class="title">Weight:</p>
+                        <span class="value">46 lbs</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contentss">
+                <div class="original-price">
+                    <p id="totalPrice">TOTAL PRICE</p>
+                    <span>$1,198.00</span>
+                </div>
+                <div>
+                    <button class="btn">ADD TO CART</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>© 2023 Woodly. All rights reserved.</p>
+    </footer>
+</body>
+</html>

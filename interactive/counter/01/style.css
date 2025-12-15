@@ -1,0 +1,48 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+#counterDisplay {
+    font-size: 200px; /* Large font size for the counter */
+    margin: 20px 0;
+    color: #7a7474; /* Dark text color */
+}
+
+button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px; /* Font size for buttons */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Animation for buttons */
+}
+
+#incrementButton {
+    background-color: #4CAF50; /* Green background for increment button */
+    color: white; /* White text */
+}
+
+#decrementButton {
+    background-color: #f44336; /* Red background for decrement button */
+    color: white; /* White text */
+}
+
+button:hover {
+    transform: scale(1.05); /* Slightly enlarge buttons on hover */
+}
+
+#resetButton {
+    background-color: #2196F3; /* Blue background for reset button */
+    color: white; /* White text */
+}
+
+#resetButton:hover {
+    background-color: #1976D2; /* Darker blue on hover */
+}

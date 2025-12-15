@@ -1,0 +1,114 @@
+/*
+ * 1. BASE STYLES & POSITIONING
+ * Centers the text horizontally and positions it 400px from the top.
+ */
+ body {
+    background-color: #000; /* Black background like the original JS */
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#animation-container {
+    position: relative; /* Necessary for absolute positioning of fireworks-center */
+    height: 100%;
+}
+
+.fireworks-center {
+    /* MODIFICATION: Centers horizontally */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* MODIFICATION: 400px from the top */
+    top: 400px; 
+    
+    font-family: 'Verdana', sans-serif;
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 50px;
+    
+    /* Initial state: Hidden before animation */
+    opacity: 0;
+    animation: fadeInText 0.5s 4.5s forwards; /* Delay + fade in after the firework launches */
+}
+
+.fireworks-center span {
+    /* Uses the custom property --hue from HTML to set color */
+    color: hsl(var(--hue), 80%, 70%);
+}
+
+/*
+ * 2. FIREWORK PARTICLE STYLES
+ * A single element (.burst-particles) generates the entire firework burst using box-shadow.
+ */
+.burst-particles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background: white; /* Initial 'star' color */
+    
+    /* Animation: 4s delay + 1.5s duration for the explosion */
+    animation: 
+        launchFirework 4s ease-in forwards,
+        burstFirework 1.5s 4s forwards; 
+}
+
+/*
+ * 3. KEYFRAMES FOR ANIMATION
+ */
+
+/* Keyframe for 4s delay and fade-in text */
+@keyframes fadeInText {
+    to {
+        opacity: 1;
+    }
+}
+
+/* * Keyframe for the vertical launch leading up to the 400px point (y = 400)
+ * Note: Coordinates here are relative to the animation container.
+ */
+@keyframes launchFirework {
+    0% {
+        transform: translate(-50%, 100vh); /* Start off-screen bottom */
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%); /* End at the text center (400px top) */
+        opacity: 1;
+    }
+}
+
+/* * Keyframe for the explosion effect using box-shadow.
+ * A long box-shadow list creates the appearance of many radial particles.
+ */
+@keyframes burstFirework {
+    0% {
+        box-shadow: 0 0 0 0 white;
+    }
+    10% {
+        /* Remove the white spot and start the particles */
+        background: transparent;
+        box-shadow: 
+            /* Example particle: x-offset y-offset blur spread color */
+            -10px -10px 0 0 hsl(20, 80%, 70%),
+            10px 10px 0 0 hsl(100, 80%, 70%),
+            0 15px 0 0 hsl(200, 80%, 70%),
+            -15px 0px 0 0 hsl(300, 80%, 70%);
+            /* (In a real implementation, you would need dozens of these for a smooth burst) */
+    }
+    100% {
+        /* Move particles outward and fade them out */
+        box-shadow: 
+            -100px -100px 0 0 transparent,
+            100px 100px 0 0 transparent,
+            0 150px 0 0 transparent,
+            -150px 0px 0 0 transparent;
+        opacity: 0;
+    }
+}

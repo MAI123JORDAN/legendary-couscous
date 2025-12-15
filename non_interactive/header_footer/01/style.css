@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Universal styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Use Poppins font */
+}
+
+/*Default background color*/
+body {
+    background: #abbaab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #beb9b9f1, #aeb3ae); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/********************************
+**          A. HEADER          **
+********************************/
+header{
+    width: 100%;
+    position: fixed; /* Fixes the header at the top */
+    top: 0; /* Aligns to top */
+    z-index: 1000; /* Ensures it stays above other elements */
+}
+/* Navigation Bar */
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+}
+
+/* Link styles */
+a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+/*Website Logo*/
+.logo h1{
+    margin-right: 50px;
+    max-height: 60px; /* Limit logo height */
+    color: rgb(221, 60, 60);
+}
+
+/* Navigation Menu*/
+nav {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between;
+    padding: 2rem 4rem; Responsive padding */
+}
+
+/* Navigation list */
+nav ul {
+    display: flex; /* Flexbox for navigation */
+}
+
+nav ul li {
+    list-style: none; /* Remove bullet points */
+    margin-right: 3rem; /* Space between items */
+}
+
+nav ul li a {
+    color: #626266; /* Default link color */
+    position: relative; /* Positioning for underline */
+    padding: 5px 0; /* Padding above and below text */
+}
+
+/* Link hover effect */
+nav ul li a:hover {
+    color: rgb(221, 60, 60); /* Change color on hover */
+}
+/* Underline effect on hover */
+nav ul li a:after {
+    content: ""; /* Create pseudo-element */
+    position: absolute; /* Absolute positioning */
+    left: 0; /* Align to the left */
+    width: 0; /* Start with no width */
+    height: 3px; /* Underline height */
+    background: rgb(221, 60, 60); /* Underline color */
+    transition: width 0.4s ease-in-out; /* Smooth transition */
+    bottom: 0; /* Position at the bottom */
+}
+nav ul li a:hover:after {
+    width: 100%; /* Full width on hover */
+}
+
+/*Icons*/
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    margin-left: 1.5rem;
+}
+/* icon images i.e search, notification */
+.icons a img {
+    height: 30px;
+    width: 30px;
+    filter: contrast(0.28);  /*making the icons look more grey in color*/
+}
+
+footer {
+    position: fixed; /* Fixes the header at the top */
+    bottom: 0; /* Aligns to top */
+    z-index: 1000; /* Ensures it stays above other elements */
+    width: 100%;
+}
+
+
+/**********************
+**** General tags *****
+***********************/
+h4 {
+    font-weight: 10;
+    color: rgb(221, 60, 60);
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+}
+
+h2{
+    font-weight: 10;
+    font-size: 2.5rem; /* Title font size */
+    margin-bottom: 4rem; /* Space below the title */
+}
+
+/* Button styles */
+.btn {
+    color: #fffffff1; /* Button text color */
+    font-size: 1rem; /* Consistent font size */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Spacing between letters */
+    padding: 1rem 2rem; /* Padding for button */
+    border-radius: 500px; /* Fully rounded button */
+    display: inline-block; /* Inline block for positioning */
+    font-weight: 500; /* Medium font weight */
+    transition: all 0.4s ease-in-out; /* Smooth transition */
+    border: 2px solid rgb(221, 60, 60); /* Border color */
+    background: rgb(221, 60, 60); /* Transparent background */
+}
+/* Button hover effect */
+.btn:hover {
+    background: transparent; /* Change background on hover */
+    color: #626266; /* Change text color on hover */
+    border: 2px solid #626266; /* Border color */
+}
+
+/*Next & Previous bottons*/
+.round {
+    text-decoration: none;
+    display: inline-block;
+    margin: 10px;
+    font-size: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    width: 40px; /* Ensures a perfect circle */
+    text-align: center;
+}
+.previous {
+    border: 2px solid rgb(221, 60, 60);
+    color: rgb(221, 60, 60);
+}
+.previous:hover{
+    color: #fffffff1;
+    background-color: rgb(221, 60, 60);
+}
+.next {
+    color: #fffffff1;
+    background-color: rgb(221, 60, 60);
+}
+.next:hover{
+    border: 2px solid rgb(221, 60, 60);
+    color: rgb(221, 60, 60);
+    background-color: #fffffff1;
+}
+
+select {
+    border: none;
+}

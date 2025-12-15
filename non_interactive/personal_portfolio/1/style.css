@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Universal styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+}
+
+/* Hero section */
+.hero {
+    width: 100%;
+    height: 100vh;
+    background: url(pexels-pixabay-434337.jpg) no-repeat center center; /* Ensure correct path to image */
+    background-size: cover;
+    position: relative;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 5rem; /* Use rem for responsiveness */
+}
+
+.logo {
+    max-height: 60px;
+    filter: contrast(0.28);
+}
+
+/* Navigation list */
+nav ul {
+    display: flex; /* Use flexbox for horizontal alignment */
+}
+
+nav ul li {
+    list-style: none;
+    margin-right: 2rem; /* Space between items */
+}
+
+nav ul li a {
+    color: #626266;
+    position: relative;
+    padding: 5px 0;
+}
+
+/* Link hover effect */
+nav ul li a:hover {
+    color: #44ada4;
+}
+
+nav ul li a:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background:#44ada4;
+    transition: width 0.3s;
+    bottom: 0;
+}
+
+nav ul li a:hover:after {
+    width: 100%;
+}
+
+/* Button styles */
+.btn {
+    color: #fff;
+    font-size: 1rem; /* Use rem for consistency */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1rem 2rem; /* Use rem for padding */
+    border-radius: 500px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all 0.4s ease-in-out, color 0.4s ease-in-out;
+    background:#44ada4;
+    border: 2px solid#44ada4;
+}
+
+.btn:hover {
+    background: transparent;
+    border-color:#44ada4;
+    color:#44ada4;
+}
+
+/* Content */
+.content {
+    position: absolute;
+    top: 35%;
+    left: 26%;
+    color: white; /* Ensures text is readable against background */
+}
+
+/* Titles and headings */
+.content .title {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+    background: linear-gradient(120deg, #44ada4 20.69%, #2f5a0c 50.19%, #626266 79.69%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.content h1 {
+    font-size: 4.5rem; /* Set using rem for scalability */
+    font-weight: 900;
+    line-height: 1.2; /* Improved line-height for better readability */
+}
+
+.content h1 span {
+    color:#44ada4;
+}
+
+/* Paragraph */
+.content p {
+    width: 30%;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+
+p, h1 {
+    color: #626266;
+} 
+.content img {
+    position: absolute;
+    top: 0%;
+    margin-left: 25%;
+    margin-top: -5%;
+    height: 480px;
+    width: 400px;
+    float: right;
+    border-radius: 50%;
+}

@@ -1,0 +1,636 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Universal styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif; /* Use Poppins font */
+}
+
+/*Default background color*/
+body {
+    background: #abbaab;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #ffffff, #abbaab);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #beb9b9f1, #aeb3ae); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+/********************************
+**          A. HEADER          **
+********************************/
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: #abbaab;
+    height: 100px;
+}
+/* Navigation Bar */
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    margin: 0 auto;
+}
+
+/* Link styles */
+a {
+    text-decoration: none; /* Remove underline from links */
+}
+
+/*Website Logo*/
+.logo h1{
+    margin-right: 50px;
+    max-height: 60px; /* Limit logo height */
+    color: rgb(221, 60, 60);
+}
+
+/* Navigation Menu*/
+nav {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between;
+    padding: 2rem 4rem; Responsive padding */
+}
+
+/* Navigation list */
+nav ul {
+    display: flex; /* Flexbox for navigation */
+}
+
+nav ul li {
+    list-style: none; /* Remove bullet points */
+    margin-right: 3rem; /* Space between items */
+}
+
+nav ul li a {
+    color: #626266; /* Default link color */
+    position: relative; /* Positioning for underline */
+    padding: 5px 0; /* Padding above and below text */
+}
+
+/* Link hover effect */
+nav ul li a:hover {
+    color: rgb(221, 60, 60); /* Change color on hover */
+}
+/* Underline effect on hover */
+nav ul li a:after {
+    content: ""; /* Create pseudo-element */
+    position: absolute; /* Absolute positioning */
+    left: 0; /* Align to the left */
+    width: 0; /* Start with no width */
+    height: 3px; /* Underline height */
+    background: rgb(221, 60, 60); /* Underline color */
+    transition: width 0.4s ease-in-out; /* Smooth transition */
+    bottom: 0; /* Position at the bottom */
+}
+nav ul li a:hover:after {
+    width: 100%; /* Full width on hover */
+}
+
+/*Icons*/
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    margin-left: 1.5rem;
+}
+/* icon images i.e search, notification */
+.icons a img {
+    height: 30px;
+    width: 30px;
+    filter: contrast(0.28);  /*making the icons look more grey in color*/
+}
+
+
+
+
+/***************************
+**  B. Hero Section       **
+***************************/
+
+/*Main hero section*/
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4rem 2rem; /* Adjusted for better responsiveness */
+    margin-top: 100px;
+    background-color: #ffffff;
+    color: #333;
+    border-bottom-right-radius: 12%;
+}
+
+/* hero text content */
+.content {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content h1 {
+    font-size: 3rem;
+    font-weight: 10;
+}
+
+.content h2 {
+    font-size: 3rem;
+    font-weight: 10;
+    color: #626266;
+    margin: 20px 0;
+}
+
+.content p {
+    margin: 40px 0;
+    color: #555;
+    max-width: 60%;
+}
+
+/*content image*/
+.image-container {
+    margin-right: 15%;
+    margin-bottom: -2%;
+}
+
+.hero img {
+    height: 600px;
+    width: 400px;
+}
+
+/************************************
+**    C. Why choose-us Section     **
+*************************************/
+/*Main hero section*/
+.choose-us {
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem 2rem; /* Adjusted for better responsiveness */
+}
+
+/* Main container for benefits */
+.benefits {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Center items */
+    align-items: center;
+    /* gap: 2rem; Space between benefits */
+}
+
+/* Heading styling for benefits */
+.benefits h3 {
+    font-weight: 10;
+    color: #555;
+    padding-left: 40px;
+    max-width: 60px;
+}
+
+/* Individual benefit Styling*/
+.benefit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 380px;
+    height: 200px;
+    border-radius: 10%;
+    transition: all 0.4s ease-in;
+}
+
+/* Hover effect for benefit boxes */
+.benefit:hover{
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+/* Decorative circle styling */
+.circle {
+    height: 70px;
+    width: 75px;
+    border-radius: 50%;
+    margin-top: -2%;
+    margin-left: -5%;
+    position: absolute;
+    z-index: 1;;
+    background-color: rgba(221, 60, 60, 0.5);
+}
+
+/* icon styling */
+.icon {
+    width: 80px; /* Fixed size for icons */
+    height: 80px; /* Fixed size for icons */
+    margin-left: -15%;
+    margin-bottom: 1rem; /* Space below the icon */
+}
+
+
+/***********************
+**     D. PRODUCT     **
+************************/
+/* Main product Section */
+.product {
+    width: 100%;
+    margin: 0 auto;
+    padding: 4rem 2rem; /* Adjusted for better responsiveness */
+}
+/* product list styling */
+.product-list {
+    margin-bottom: 3rem;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Center items */
+    align-items: center;
+    /* gap: 2rem; Space between benefits */
+}
+
+/* Individual product item styling */
+.product-item {
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    align-items: left;
+    /* width: 200px;
+    height: 350px; */
+}
+
+/* Image container styling */
+.image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 200px;
+    border: 1px solid rgba(221, 60, 60, 0.5);
+    border-radius: 10%;
+    transition: all 0.4s ease-in;
+    margin-bottom: 20px;
+}
+
+/* Hover effect for image containers */
+.image:hover{
+    background-color:  rgba(221, 60, 60, 0.5);
+    cursor: pointer;
+}
+
+/* Image sizing */
+.image img{
+    height: 200px;
+    width: 150px;
+}
+
+/* Styling for product name */
+.product-item figcaption {
+    margin: 10px 0;
+    color: #626266;
+}
+
+/* Styling for product price */
+.product-item p {
+    color: rgb(221, 60, 60);
+}
+
+
+/************************
+**** E. Testimonial  ****
+************************/
+
+/* Main testimonial section styling */
+.testimonial {
+    width: 100%; /* Full width of the section */
+    margin-bottom: 5rem; /* Space below the testimonial section */
+    padding: 4rem 2rem; /* Padding for better responsiveness */
+}
+
+/* Container for the list of testimonials */
+.testimonial-list {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    gap: 2rem; /* Space between testimonial items */
+    margin-bottom: 2rem; /* Space below the testimonial list */
+}
+
+/* Individual testimonial item styling */
+.testimonial-item {
+    /* display: flex; /* Optional: Use flexbox for layout
+    /* align-items: center; */ /* Optional: Center items vertically */
+    width: 450px; /* Fixed width for each testimonial item */
+    height: 250px; /* Fixed height for each testimonial item */
+    padding: 20px; /* Inner padding for spacing */
+    border-radius: 10%; /* Rounded corners */
+    border: 1px solid rgba(221, 60, 60, 0.5); /* Border styling */
+    transition: all 0.4s ease-in-out; /* Smooth transition on hover */
+}
+
+/* Hover effect for testimonial items */
+.testimonial-item:hover {
+    background-color: rgba(221, 60, 60, 0.5); /* Change background color on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Profile image styling */
+.testimonial-item img {
+    height: 80px; /* Fixed height for images */
+    width: 80px; /* Fixed width for images */
+    border-radius: 50%; /* Make images circular */
+    float: left; /* Float image to the left */
+    overflow: auto; /* Manage overflow */
+    margin: 13% 20px; /* Margin for spacing around the image */
+}
+
+/* Testimonial text styling */
+.testimonial-item p {
+    margin-top: 10%; /* Space above text */
+    margin-left: -10%; /* Adjust left margin */
+    margin-bottom: 20px; /* Space below text */
+    font-style: italic; /* Italicize text */
+}
+
+/* Display style for reviewer's name and rating */
+.testimonial-item span,
+h3 {
+    display: inline-block; /* Align elements in a line */
+}
+
+/* Review rating styling */
+.testimonial-item span {
+    color: gold; /* Color for the rating stars */
+}
+
+
+/************************
+**** F. Contact US   ****
+************************/
+
+/* Main contact section styling */
+.contact-us {
+    width: 100%; /* Full width of the section */
+    display: flex; /* Use flexbox for layout */
+    /* justify-content: center; */ /* (Optional) Center items horizontally */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space items evenly */
+    padding: 20px; /* Padding for better responsiveness */
+    background-color: #ffffff; /* Background color */
+    color: #333; /* Text color */
+    border-bottom-right-radius: 12%; /* Rounded bottom-right corner */
+    height: 800px; /* Fixed height for the section */
+    margin-bottom: 100px; /* Space below the contact section */
+}
+
+/* Text section styling */
+.text-section {
+    flex: 1; /* Take remaining space */
+    width: 60%; /* Fixed width for the text section */
+    padding: 20px 100px; /* Inner padding for spacing */
+}
+
+/* Heading styling */
+.text-section h2 {
+    width: 400px; /* Fixed width for heading */
+}
+
+/* Paragraph styling */
+.text-section p {
+    width: 400px; /* Fixed width for paragraph */
+}
+
+/* Email input styling */
+input[type="email"] {
+    padding: 10px; /* Inner padding */
+    border: 1px solid #ccc; /* Border style */
+    border-radius: 5px; /* Rounded input corners */
+    width: 30%; /* Fixed width */
+    margin: 0px 10px; /* Margin for spacing */
+}
+
+/* Subscribe button styling */
+.subscribe-btn {
+    color: #fffffff1; /* Button text color */
+    border-radius: 30px; /* Fully rounded button */
+    display: inline-block; /* Inline block for positioning */
+    transition: all 0.4s ease-in-out; /* Smooth transition */
+    border: 2px solid rgb(221, 60, 60); /* Border color */
+    background: rgb(221, 60, 60); /* Background color */
+    height: 70px; /* Fixed height for button */
+    width: 100px; /* Fixed width for button */
+    padding: 5px 15px; /* Inner padding */
+    position: relative; /* Positioning context */
+    top: 30px; /* Adjust vertical position */
+    /* margin-bottom: -500px; */ /* (Optional) Adjust vertical spacing */
+}
+
+/* Hover effect for subscribe button */
+.subscribe-btn:hover {
+    background: transparent; /* Change background on hover */
+    color: #626266; /* Change text color on hover */
+    border: 2px solid #626266; /* Change border color on hover */
+}
+
+/* Image inside subscribe button */
+.subscribe-btn img {
+    height: 60px; /* Fixed height for button image */
+    width: 60px; /* Fixed width for button image */
+}
+
+/* Image section styling */
+.image-section {
+    flex: 1; /* Take remaining space */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center image horizontally */
+    align-items: center; /* Center image vertically */
+}
+
+/* Image styling */
+.image-section img {
+    max-width: 80%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+    /* border-radius: 10px; */ /* (Optional) Rounded image corners */
+}
+
+/************************
+**** G. FOOTER       ****
+************************/
+
+/* Footer styling */
+footer {
+    position: fixed; /* Fixes the footer at the bottom */
+    bottom: 0; /* Aligns to the bottom of the window */
+    z-index: 100; /* Ensures it stays above other elements */
+    width: 100%; /* Full width of the footer */
+    background-color: #abbaab; /* Background color */
+    height: 100px; /* Fixed height for the footer */
+}
+
+/* Dropdown styling */
+select {
+    border: none; /* Remove border */
+    background-color: #abbaab; /* Match footer background */
+}
+
+/**********************
+**** General tags *****
+***********************/
+
+/* Heading styling */
+h4 {
+    font-weight: 10; /* Font weight */
+    color: rgb(221, 60, 60); /* Text color */
+    margin-top: 8rem; /* Spacing above the heading */
+    margin-bottom: 2rem; /* Spacing below the heading */
+}
+
+h2 {
+    font-weight: 10; /* Font weight */
+    font-size: 2.5rem; /* Title font size */
+    margin-bottom: 4rem; /* Space below the title */
+}
+
+/* Button styles */
+.btn {
+    color: #fffffff1; /* Button text color */
+    font-size: 1rem; /* Consistent font size */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 2px; /* Spacing between letters */
+    padding: 1rem 2rem; /* Padding for button */
+    border-radius: 500px; /* Fully rounded button */
+    display: inline-block; /* Inline block for positioning */
+    font-weight: 500; /* Medium font weight */
+    transition: all 0.4s ease-in-out; /* Smooth transition */
+    border: 2px solid rgb(221, 60, 60); /* Border color */
+    background: rgb(221, 60, 60); /* Background color */
+}
+
+/* Button hover effect */
+.btn:hover {
+    background: transparent; /* Change background on hover */
+    color: #626266; /* Change text color on hover */
+    border: 2px solid #626266; /* Change border color on hover */
+}
+
+/* Next & Previous buttons */
+.round {
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Inline block for spacing */
+    margin: 10px; /* Margin around buttons */
+    font-size: 40px; /* Font size for icons */
+    line-height: 40px; /* Align icon vertically */
+    border-radius: 50%; /* Make circular */
+    width: 40px; /* Fixed width for circular buttons */
+    text-align: center; /* Center text/icon */
+}
+
+.previous {
+    border: 2px solid rgb(221, 60, 60); /* Border color for previous button */
+    color: rgb(221, 60, 60); /* Text color for previous button */
+}
+
+.previous:hover {
+    color: #fffffff1; /* Change text color on hover */
+    background-color: rgb(221, 60, 60); /* Change background on hover */
+}
+
+.next {
+    color: #fffffff1; /* Text color for next button */
+    background-color: rgb(221, 60, 60); /* Background color for next button */
+}
+
+.next:hover {
+    border: 2px solid rgb(221, 60, 60); /* Change border color on hover */
+    color: rgb(221, 60, 60); /* Change text color on hover */
+    background-color: #fffffff1; /* Change background on hover */
+}
+
+/**********************
+**** MEDIA QUERIES ****
+***********************/
+
+/* Tablet and smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+    /* Contact Us section */
+    .contact-us {
+        flex-direction: column; /* Stack text and image vertically */
+        height: auto; /* Remove fixed height */
+    }
+
+    .text-section {
+        width: 100%; /* Full width on smaller screens */
+        padding: 20px; /* Adjust padding */
+    }
+
+    .image-section img {
+        max-width: 100%; /* Responsive images */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .testimonial-item {
+        width: 90%; /* Full width for testimonials */
+        height: auto; /* Responsive height */
+    }
+
+    .subscribe-btn {
+        width: 80%; /* Full width for buttons */
+        top: 20px; /* Adjust vertical position */
+    }
+
+    .btn {
+        width: 100%; /* Full width on smaller screens */
+        font-size: 0.9rem; /* Smaller font size */
+    }
+
+    /* Icons */
+    .icons img {
+        width: 30px; /* Smaller icons */
+        height: 30px; /* Maintain proportions */
+    }
+
+    /* Navigation items */
+    nav ul {
+        flex-direction: column; /* Stack navigation links */
+        align-items: center; /* Center items */
+    }
+}
+
+/* Mobile phones (max-width: 480px) */
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.8rem; /* Smaller heading for mobile */
+    }
+
+    .btn {
+        padding: 0.5rem 1rem; /* Smaller button padding */
+    }
+
+    input[type="email"] {
+        width: 100%; /* Full width for input fields */
+        margin: 10px 0; /* Spacing adjustments */
+    }
+}
+
+/* Desktops and small laptops (max-width: 1024px) */
+@media (max-width: 1024px) {
+    /* Adjust layout for smaller desktops */
+    .contact-us {
+        flex-direction: row; /* Maintain row layout */
+    }
+
+    .text-section {
+        width: 70%; /* Adjust width slightly for smaller desktops */
+    }
+
+    .image-section img {
+        max-width: 90%; /* Responsive image for smaller desktops */
+    }
+
+    h2 {
+        font-size: 2.2rem; /* Adjust heading size for small laptops */
+    }
+
+    .testimonial-list {
+        flex-wrap: wrap; /* Allow testimonials to wrap */
+        gap: 1.5rem; /* Adjust gap for smaller screens */
+    }
+}
