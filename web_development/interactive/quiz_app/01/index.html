@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Dev Quiz Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <section id="home-screen" class="active">
+            <h1>Web Dev Quiz</h1>
+            <p>Test your knowledge of HTML, CSS and Javascipt!</p>
+            <button id="start-btn">Start Quiz</button>
+        </section>
+
+        <section id="quiz-screen" class="hidden">
+            <div class="quiz-header">
+                <span id="progress">Question 1 of 5</span>
+            </div>
+
+            <div id="question-container">
+                <h2 id="question-text">Question text goes here?</h2>
+                <div id="option-list">
+                </div>
+            </div>
+
+            <div class="quiz-footer">
+                <button id="next-btn" class="hidden">Next Question</button>
+            </div>
+        </section>
+
+        <section id="result-screen" class="hidden">
+            <h2>Quiz Commpleted!</h2>
+            <p id="score-text"> You scored 0 out of 0</p>
+            <button id="restart-btn">Try Again</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
