@@ -12,4 +12,4 @@ Languages: HTML, CSS, JavaScript.
 Tools: Git, GitHub, Blender (3D Modeling).
 
 🎯 The Goal
-I am currently refining my skills to provide high-fidelity 3D-integrated web solutions for architectural and medical institutions.
+I am currently refining my skills to provide high-fidelity 3D-integrated web solutions.
