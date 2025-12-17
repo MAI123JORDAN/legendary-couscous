@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Universal styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Link styles */
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: rgb(117, 122, 119);
+    /* color: #fff; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    background: url('images/background.jpg');
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 900px;
+    max-height: 600px;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.left {
+    flex: 1;
+    padding: 40px;
+    /* color: #626266; */
+}
+.left h2 {
+    margin-top: 5rem;
+}
+
+.right {
+    flex: 1;
+    padding: 40px;
+    /* background-color: #626266; */
+    color: #626266;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    font-size: 35px;
+    color: #44ada4;
+    /* font-weight: 25; */
+    text-transform: uppercase;
+
+}
+
+.right h2 {
+    margin-top: 0;
+    align-self: center;
+}
+.right p {
+    align-self: center;
+    margin: 2rem 0;
+}
+
+/*Input styles*/
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1 px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+input[type="email"] {
+    margin-top: 2rem;
+    /* Add your image as a background */
+    background-image: url('images/icons8-email-100-5.png');
+    background-position: 0px 0px; 
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding-left: 40px;
+    background-size: 40px 40px;
+}
+
+input[type="password"] {
+    /* Add your image as a background */
+    background-image: url('images/icons8-password-100.png');
+    background-position: 0px 0px; 
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding-left: 40px;
+    background-size: 30px 30px;
+    margin-bottom: 2rem;
+}
+
+label {
+    font-size: 15px;
+    margin-right: 25%;
+}
+
+/* Button styles */
+.btn {
+    color: #fff;
+    font-size: 1rem; /* Use rem for consistency */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 1rem 2rem; /* Use rem for padding */
+    border-radius: 500px;
+    display: inline-block;
+    font-weight: 500;
+    transition: all 0.4s ease-in-out, color 0.4s ease-in-out;
+    background:#44ada4;
+    border: 2px solid#44ada4;
+}
+.btn:hover {
+    background: transparent;
+    border-color:#626266;
+    color:#626266;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+}
+
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .left,
+    .right {
+        padding: 20px;
+    }
+}
