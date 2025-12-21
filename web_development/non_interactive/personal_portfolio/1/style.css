@@ -172,6 +172,10 @@ p, h1 {
     color: #626266;
 } 
 
+
+
+
+
 /* About Section Styling */
 .about-section {
     /* background: #1a1a1a; Dark theme to match your reference */
@@ -213,7 +217,7 @@ p, h1 {
 }
 
 /* Title hover effect */
-.about-text .title {
+.title {
     color: #44ada4;
     text-decoration: underline;
 }
@@ -283,6 +287,77 @@ p, h1 {
     color: #fff;
 }
 
+
+
+
+
+/* Services Section Styling */
+.services-section {
+    padding: 100px 10%;
+    background: #111111; /* Slightly darker than #1a1a1a for zebra contrast */
+    color: #fff;
+    text-align: center;
+}
+
+.section-header {
+    margin-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin: 15px 0;
+}
+
+.section-header h2 span {
+    color: #44ada4;
+}
+
+.section-header p {
+    color: #626266;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for desktop */
+    gap: 30px;
+}
+
+.service-card {
+    background: #1a1a1a; /* Matching your About section background */
+    padding: 40px 30px;
+    border-radius: 10px;
+    text-align: left;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: #44ada4;
+    background: #222;
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #44ada4; /* Primary accent color */
+}
+
+.service-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #626266;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+
 /* Responsive Fix for Mobile */
 @media (max-width: 768px) {
     .hero-container {
@@ -303,6 +378,7 @@ p, h1 {
         height: 250px;
     }
 
+    /* About ME */
     .about-container {
         flex-direction: column;
         text-align: center;
@@ -313,5 +389,10 @@ p, h1 {
     }
     .about-btns {
         justify-content: center;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr; /* 1 column for mobile */
     }
 }
