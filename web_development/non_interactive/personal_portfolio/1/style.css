@@ -7,8 +7,15 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+/* Enable smooth scrolling for the whole page */
 html {
     scroll-behavior: smooth;
+}
+
+/* Fix the 'Header Overlap' issue */
+/* This tells the browser to stop 100px BEFORE the section starts */
+section {
+    scroll-margin-top: 80px; 
 }
 
 header {
