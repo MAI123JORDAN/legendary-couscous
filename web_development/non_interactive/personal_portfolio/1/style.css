@@ -7,6 +7,9 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /* Link styles */
 a {
@@ -15,11 +18,11 @@ a {
 
 /* Hero section */
 .hero {
+    background: #0f0f0f;
     width: 100%;
     height: 100vh;
-    background: url(pexels-pixabay-434337.jpg) no-repeat center center; /* Ensure correct path to image */
-    background-size: cover;
-    position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navigation */
@@ -27,7 +30,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2rem 5rem; /* Use rem for responsiveness */
+    padding: 1.5rem 5rem; /* Use rem for responsiveness */
 }
 
 .logo {
@@ -48,7 +51,7 @@ nav ul li {
 nav ul li a {
     color: #626266;
     position: relative;
-    padding: 5px 0;
+    padding: 5% 0;
 }
 
 /* Link hover effect */
@@ -92,52 +95,223 @@ nav ul li a:hover:after {
     color:#44ada4;
 }
 
-/* Content */
-.content {
-    position: absolute;
-    top: 35%;
-    left: 26%;
-    color: white; /* Ensures text is readable against background */
+/* Main Layout Container */
+.hero-container {
+    display: flex;
+    /* align-items: center;
+    justify-content: center; */
+    flex: 1; /* Fills remaining height */
+    width: 100%;
+    padding: 0 10%;
+}
+
+/* Base style for both halves */
+.hero-section {
+    flex: 1; /* This makes them exactly 50% each */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    padding: 0 5%;
+}
+
+/* Left Side Alignment */
+.hero-image-side {
+    align-items: center; /* Centers image horizontally in its 50% */
+}
+
+.image-wrapper img {
+    width: 450px; /* Adjust size as needed */
+    height: 450px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    /* border: 10px solid #626266; */
+}
+
+/* Right Side Alignment */
+.hero-text-side {
+    align-items: flex-start; /* Aligns text to the left of its 50% */
+    text-align: left;
+}
+
+.hero-text-side h1 {
+    font-size: 4rem;
+    color: #333;
+    line-height: 1.1;
+    margin: 5% 0;
+}
+
+.hero-text-side p {
+    width: 80%; /* Now the paragraph fits better in its half */
+    font-size: 1.1rem;
+    margin-bottom: 5%;
 }
 
 /* Titles and headings */
-.content .title {
+.hero-text-side .title {
     text-transform: uppercase;
     letter-spacing: 4px;
     margin-bottom: 20px;
     background: linear-gradient(120deg, #44ada4 20.69%, #2f5a0c 50.19%, #626266 79.69%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.content h1 {
+.h1 {
     font-size: 4.5rem; /* Set using rem for scalability */
     font-weight: 900;
     line-height: 1.2; /* Improved line-height for better readability */
 }
 
-.content h1 span {
+.hero-text-side h1 span {
     color:#44ada4;
 }
-
-/* Paragraph */
-.content p {
-    width: 30%;
-    margin-top: 25px;
-    margin-bottom: 30px;
-}
-
 
 p, h1 {
     color: #626266;
 } 
-.content img {
+
+/* About Section Styling */
+.about-section {
+    /* background: #1a1a1a; Dark theme to match your reference */
+    padding: 100px 10%;
+    background: #1a1a1a; /* Dark theme to match your reference */
+    color: #626266;
+    border-top: 1px solid rgba(255, 255, 255, 0.05); /* Very faint line */
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+/* Square Image Styling */
+.about-img {
+    flex: 1;
+}
+
+.about-img img {
+    width: 100%;
+    max-width: 450px;
+    border: 10px solid #252525; /* Subtle border */
+    display: block;
+}
+
+.about-text {
+    flex: 1.5;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin: 10px 0 20px;
+}
+
+.about-text h2 span {
+    color: #44ada4;
+}
+
+/* Title hover effect */
+.about-text .title {
+    color: #44ada4;
+    text-decoration: underline;
+}
+
+/* .about-text .title:after {
+    content: "";
     position: absolute;
-    top: 0%;
-    margin-left: 25%;
-    margin-top: -5%;
-    height: 480px;
-    width: 400px;
-    float: right;
-    border-radius: 50%;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background:#44ada4;
+    transition: width 0.3s;
+    bottom: 0;
+}
+
+.about-text .title:hover:after {
+    width: 100%;
+} */
+
+/* The Info Grid (2 columns) */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin: 30px 0;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.info-item {
+    font-size: 0.95rem;
+    color: #626266;
+}
+
+.info-item strong {
+    color: #333;
+    margin-right: 10px;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    justify-content: space-around;
+    margin: 1rem 0;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    filter: contrast(0.5);
+}
+
+/* Buttons */
+.about-btns {
+    display: flex;
+    gap: 20px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 2px solid #44ada4;
+    color: #44ada4;
+}
+
+.btn-outline:hover {
+    background: #44ada4;
+    color: #fff;
+}
+
+/* Responsive Fix for Mobile */
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column; /* Stack them */
+    }
+    .hero-section {
+        flex: none;
+        height: 50vh; /* Each gets half the screen height on mobile */
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+    }
+    .hero-text-side p {
+        width: 100%;
+    }
+    .image-wrapper img {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .info-grid {
+        grid-template-columns: 1fr;
+        text-align: left;
+    }
+    .about-btns {
+        justify-content: center;
+    }
 }
