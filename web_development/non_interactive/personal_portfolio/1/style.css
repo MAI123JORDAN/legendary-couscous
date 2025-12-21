@@ -11,6 +11,23 @@ html {
     scroll-behavior: smooth;
 }
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Ensures it stays above all other content */
+    background: rgba(26, 26, 26, 0.95); /* Slight transparency for a modern look */
+    backdrop-filter: blur(10px); /* Creates a premium blurred glass effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 20px 10%;
+    transition: 0.3s;
+}
+
+#home {
+    padding-top: 100px; 
+}
+
 /* Link styles */
 a {
     text-decoration: none;
@@ -437,6 +454,96 @@ p, h1 {
     border-color: #44ada4;
 }
 
+
+
+/* Footer Section */
+/* Footer Styling */
+.footer {
+    background: #111111; /* Darker shade for contrast */
+    padding: 60px 10% 20px;
+    color: #fff;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 40px;
+}
+
+.footer-content {
+    flex: 2;
+}
+
+.footer-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.footer-content h3 span {
+    color: #44ada4; /* Your signature teal */
+}
+
+.footer-content p {
+    color: #626266;
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+.footer-links {
+    flex: 1;
+}
+
+.footer-links h4 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.footer-links ul {
+    list-style: none;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    color: #626266;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #44ada4;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.footer-socials img {
+    width: 25px;
+    filter: contrast(0.5);
+    transition: 0.3s;
+}
+
+.footer-socials img:hover {
+    filter: contrast(1);
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    color: #626266;
+    font-size: 0.8rem;
+}
+
+
 /* Responsive Fix for Mobile */
 @media (max-width: 768px) {
     .hero-container {
@@ -481,5 +588,17 @@ p, h1 {
     }
     .form-group {
         flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-content p {
+        margin: 0 auto;
+    }
+    .footer-socials {
+        justify-content: center;
     }
 }
