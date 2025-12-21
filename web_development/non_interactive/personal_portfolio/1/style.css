@@ -358,6 +358,85 @@ p, h1 {
 }
 
 
+/* Contact Section Styling */
+.contact-section {
+    padding: 100px 10%;
+    background: #1a1a1a; /* Zebra contrast - matching About section */
+    color: #fff;
+}
+
+.contact-container {
+    display: flex;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+.section-header p {
+    margin: 0;
+}
+
+/* Info Side */
+.contact-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: #252525;
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 4px solid #44ada4;
+}
+
+.info-box .icon {
+    font-size: 1.5rem;
+}
+
+.info-box h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.info-box p {
+    color: #626266;
+    font-size: 0.9rem;
+}
+
+/* Form Side */
+.contact-form {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    gap: 20px;
+}
+
+.contact-form input, 
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    background: #252525;
+    border: 1px solid #333;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #44ada4;
+}
+
 /* Responsive Fix for Mobile */
 @media (max-width: 768px) {
     .hero-container {
@@ -394,5 +473,13 @@ p, h1 {
     /* Services */
     .services-grid {
         grid-template-columns: 1fr; /* 1 column for mobile */
+    }
+
+    /* Contact ME */
+    .contact-container {
+        flex-direction: column;
+    }
+    .form-group {
+        flex-direction: column;
     }
 }
