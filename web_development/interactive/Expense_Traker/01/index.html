@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="app-container">
+        <header>
+            <h2>Nexus Finance</h2>
+            <p>Welcome back, Mai</p>
+        </header>
+
+        <div class="balance-card">
+            <span>TOTAL BALANCE</span>
+            <h1 id="total-balance">$0.00</h1>
+            <div class="card-footer">
+                <div class="card-stat">
+                    <small>INCOME</small>
+                    <p id="income-display" class="plus">+$0.00</p>
+                </div>
+                <div class="card-stat">
+                    <small>EXPENSES</small>
+                    <p id="expense-display" class="minus">-$0.00</p>
+                </div>
+            </div>
+        </div>
+
+        <section class="transaction-input">
+            <h3>Add New Transaction</h3>
+            <form id="transaction-form">
+                <input type="text" id="text" placeholder="Description (e.g., Blender License)" required>
+                <input type="number" id="amount" placeholder="Amount (negative = expense)" required>
+                <button class="btn-gradient">Add Transaction</button>
+            </form>
+        </section>
+
+        <section class="history">
+            <h3>Recent History</h3>
+            <ul id="list" class="list">
+            </ul>
+            <button id="clear-btn" class="btn-clear">Clear All History</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
