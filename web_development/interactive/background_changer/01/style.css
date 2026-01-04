@@ -20,7 +20,7 @@ h1 {
     height: 300px;
     margin: 20px auto;
     border-radius: 15px;
-    transition: background-color 0.5s;
+    transition: background-color 2s;
 }
 
 .btn {
