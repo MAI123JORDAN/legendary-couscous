@@ -1,0 +1,302 @@
+/* 1. Luxury Variables */
+:root {
+    --dark-bg: #0f0f0f;      /* Deep Black */
+    --card-bg: #1a1a1a;      /* Charcoal Zebra Contrast */
+    --gold-accent: #d4af37;  /* Premium Gold */
+    --white: #ffffff;
+    --text-muted: #888888;
+    --glass: rgba(255, 255, 255, 0.03);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--dark-bg);
+    color: var(--white);
+    min-height: 100vh;
+}
+
+/* 2. Navigation Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    background: transparent;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+}
+
+.logo span {
+    color: var(--gold-accent);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--gold-accent);
+}
+
+.nav-icons {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: var(--gold-accent);
+}
+
+/* 3. Main Product Wrapper */
+.product-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10%;
+}
+
+.product-container {
+    display: flex;
+    width: 100%;
+    max-width: 1100px;
+    background: var(--card-bg);
+    border-radius: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    overflow: hidden;
+    box-shadow: 0 50px 100px rgba(0,0,0,0.8);
+}
+
+/* 1. Image Section Styling */
+.image-section {
+    flex: 1;
+    background: radial-gradient(circle at center, #252525 0%, var(--card-bg) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 40px;
+}
+
+.badge {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background: var(--gold-accent);
+    color: var(--dark-bg);
+    padding: 5px 15px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+#main-product-img {
+    width: 100%;
+    max-width: 450px;
+    filter: drop-shadow(0 20px 30px rgba(0,0,0,0.5));
+    transition: transform 0.5s ease;
+}
+
+.image-section:hover #main-product-img {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+/* 2. Info Section Styling */
+.info-section {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+}
+
+.category {
+    color: var(--gold-accent);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.info-section h1 {
+    font-size: 2.8rem;
+    line-height: 1.1;
+    margin-bottom: 15px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--gold-accent);
+    font-size: 0.8rem;
+    margin-bottom: 30px;
+}
+
+.rating span {
+    color: var(--text-muted);
+    margin-left: 10px;
+}
+
+/* 3. Price & Specs */
+.price-box {
+    margin-bottom: 30px;
+}
+
+.currency {
+    font-size: 1.2rem;
+    color: var(--gold-accent);
+    vertical-align: top;
+}
+
+.price {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.spec-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 30px;
+    margin-bottom: 40px;
+}
+
+.spec-item small {
+    display: block;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    margin-bottom: 5px;
+}
+
+.spec-item p {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* 1. Purchase Controls */
+.purchase-controls {
+    display: flex;
+    gap: 20px;
+    margin-top: auto; /* Pushes to bottom of info section */
+}
+
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    background: var(--glass);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 5px;
+}
+
+.qty-btn {
+    background: transparent;
+    border: none;
+    color: var(--white);
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.qty-btn:hover {
+    color: var(--gold-accent);
+}
+
+#qty-value {
+    width: 40px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.add-to-cart {
+    flex: 1;
+    background: var(--gold-accent);
+    color: var(--dark-bg);
+    border: none;
+    border-radius: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background: #b8952d;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+}
+
+/* 2. Professional Footer */
+.product-footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.product-footer p {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-align: center;
+}
+
+/* 3. Responsive Media Queries */
+@media screen and (max-width: 968px) {
+    .product-container {
+        flex-direction: column;
+        max-width: 600px;
+        height: auto;
+    }
+
+    .image-section {
+        padding: 60px;
+    }
+
+    .info-section {
+        padding: 40px;
+    }
+
+    .info-section h1 {
+        font-size: 2.2rem;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .navbar {
+        padding: 20px 5%;
+    }
+    
+    .nav-links {
+        display: none; /* Hide links on small mobile for clean UI */
+    }
+
+    .purchase-controls {
+        flex-direction: column;
+    }
+
+    .price {
+        font-size: 2.2rem;
+    }
+}
