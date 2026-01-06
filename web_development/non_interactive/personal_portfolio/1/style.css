@@ -130,6 +130,7 @@ nav ul li a:hover:after {
     background: transparent;
     border-color:#44ada4;
     color:#44ada4;
+    cursor: pointer;
 }
 
 /* Main Layout Container */
@@ -478,6 +479,7 @@ p, h1 {
 .contact-form input:focus, 
 .contact-form textarea:focus {
     border-color: #44ada4;
+    
 }
 
 
@@ -519,7 +521,9 @@ p, h1 {
 }
 
 /* 2. The Bento Grid Logic */
-.gallery-grid {
+.gallery-grid {    
+    width: 80%;
+    margin: 0 auto;
     display: grid;
     /* This creates a 3-column layout on desktop */
     grid-template-columns: repeat(3, 1fr);
