@@ -158,11 +158,11 @@ nav ul li a:hover:after {
 }
 
 .image-wrapper img {
-    width: 450px; /* Adjust size as needed */
-    height: 450px;
+    width: 500px; /* Adjust size as needed */
+    /* height: 500px; */
     object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    /* border-radius: 50%; */
+    /* box-shadow: 0 20px 40px rgba(0,0,0,0.1); */
     /* border: 10px solid #626266; */
 }
 
@@ -416,7 +416,7 @@ p, h1 {
 }
 
 .section-header p {
-    margin: 0;
+    margin: 0 auto;
 }
 
 /* Info Side */

@@ -1,0 +1,124 @@
+.zen-wrapper {
+  /* min-height: 100vh; */
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  padding-top: 80px;
+  color: #4a4a4a;
+}
+
+.zen-card {
+  height: auto;
+  width: 100%;
+  max-width: 450px;
+  background: #ffffff;
+  padding: 40px;
+  border-radius: 30px;
+  box-shadow: 0 20px 40px rgba(136, 160, 112, 0.1); /* Soft Sage Shadow */
+}
+
+header h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+header h1 span {
+  color: #88a070;
+  font-weight: 300;
+}
+header p {
+  font-style: italic;
+  color: #a1a1a1;
+  margin-bottom: 30px;
+}
+
+.habit-input {
+  display: flex;
+  background: #f9f8f6;
+  padding: 8px;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  border: 1px solid #e0ddd7;
+}
+
+.habit-input input {
+  flex: 1;
+  background: transparent;
+  border: none;
+  padding: 10px 15px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.habit-input button {
+  background: #88a070;  /* Sage Green */
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.habit-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px;
+  background: #fff;
+  border: 1px solid #f2efe9;
+  border-radius: 20px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.habit-input:hover {
+  border-color: #88a070;
+  transform: scale(1.02);
+}
+
+.check-circle {
+  width: 24px;
+  height: 24px;
+  border: 2px solid #88a070;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #88a070;
+}
+
+.habit-item.done {
+  background: #f0f4ec;
+  border-color: #88a070;
+}
+.habit-item.done span {
+  text-decoration: line-through;
+  color: #88a070;
+}
+
+.habit-item.done .check-circle {
+  background: #88a070;
+  color: white;
+  animation: checkPop 0.3s ease-out;
+}
+
+/* Styling for when the list is empty */
+.empty-state {
+  text-align: center;
+  padding: 30px;
+  background: #f9f8f6;
+  border: 2px dashed #e0ddd7;
+  border-radius: 20px;
+  color: #a1a1a1;
+  font-size: 0.9rem;
+}
+
+/* Satisfaction Animation */
+@keyframes checkPop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}

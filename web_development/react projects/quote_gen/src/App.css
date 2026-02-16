@@ -1,0 +1,62 @@
+/* MAgazine-style layout */
+.quote-wrapper {
+    height: 100vh;
+    color: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.quote-box {
+    max-width: 700px;
+    text-align: center;
+    border-left: 10px solid #000;   /* Bold vertical line */
+    padding: 40px;
+}
+
+/* Elegant, large typography */
+.quote-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.quote-author {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* High-contrast button */
+.new-quote-btn {
+    background: #000;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.new-quote-btn:hover {
+    background: #333;
+    letter-spacing: 5px;    /* Cool hover effect*/
+}
+
+/* Simple Loading Text */
+.loader {
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    50% { 
+        opacity: 0; 
+    }
+}

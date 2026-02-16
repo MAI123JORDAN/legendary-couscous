@@ -1,0 +1,96 @@
+body {
+  background: #f0f2f5;
+  box-sizing: border-box;
+}
+
+/* Container for the calculated result */
+.result-container {
+  margin-top: 30px;
+  padding-top: 30px;
+  border-top: 2px solid #f0f2f5;
+  text-align: center;
+  animation: slideUp 0.5s ease; /* Smooth entrance */
+}
+
+/* Big BMI number display */
+.bmi-score {
+  font-size: 4rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+/* Category Label (e.g. Healthy) */
+.status-badge {
+  display: inline-block;
+  color: white;
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+/* The Background of the Gauge */
+.meter-bg {
+  width: 100%;
+  height: 10px;
+  background: #eee;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+/* The Animated Fill of the Gauge */
+.meter-fill {
+  height: 100%;
+  transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy effect */
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Container for the advice list */
+.advice-section {
+  margin-top: 25px;
+  background: #f8faf8; /* Light mint tint */
+  padding: 20px;
+  border-radius: 16px;
+  text-align: left;
+}
+
+.advice-section h3 {
+  font-size: 1rem;
+  color: #1a1a1a;
+  margin-bottom: 15px;
+}
+
+.advice-list {
+  padding-left: 20px;
+  color: #444;
+  font-size: 0.9rem;
+}
+
+.advice-list li {
+  margin-bottom: 8px;
+}
+
+/* Reset Button */
+.reset-btn {
+  width: 100%;
+  margin-top: 20px;
+  background: transparent;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 10px;
+  color: #888;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: 0.3s;
+}
+
+.reset-btn:hover {
+  background: #eee;
+  color: #333;
+}
